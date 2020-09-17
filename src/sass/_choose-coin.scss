@@ -135,6 +135,9 @@
 
         &__variant,
         &__classic {
+            max-width: 300px;
+            margin: 0 auto;
+
             .coin {
                 width: 100px;
                 height: 100px;
