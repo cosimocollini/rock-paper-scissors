@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+@import './variables';
+@import './nav';
+@import './modal';
+@import './buttons';
+@import './choose-coin';
+@import './result';
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    box-sizing: border-box;
+    display: block;
+    padding: #{$spacing-grid * 6};
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient($main-bg);
+    font-size: 16px;
+    position: relative;
+
+    .rps {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      &__actions {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+    }
+
+    @media all and (max-width: 960px) {
+      padding: #{$spacing-grid * 2};
+
+      .rps {
+        &__actions {
+          flex-direction: column;
+
+          .btn {
+            width: 100%;
+
+            &:first-child {
+              margin-bottom: #{$spacing-grid * 2};
+            }
+          }
+        }
+      }
+    }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.list-item {
+  transition: all 1s;
+  display: inline-block;
+}
+.list-enter, .list-leave-to {
+  opacity: 0;
+}
+.list-leave-active {
+  position: absolute;
+}
+
+
+.logo-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .5s;
+}
+.logo-enter-active {
+    opacity: .5;
+    transition: all .5s;
+}
+.logo-enter-to {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all .5s;
+}
+
+.logo-leave-active {
+  //transform: translateX(-100px);
+  transition: all .5s;
+}
+.logo-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transform: translateX(-100%);
+  opacity: 0;
+}

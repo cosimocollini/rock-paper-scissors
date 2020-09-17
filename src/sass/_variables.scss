@@ -1,0 +1,15 @@
+$spacing-grid: 8px;
+
+$dark-text: #3b4363;
+$score-text: #2a46c0;
+$header-outline: #606e85;
+
+$main-bg: circle, rgb(31, 55, 86) 0%, rgb(20, 21, 57) 100%;
+
+$scissors-gradient: 90deg, hsl(39, 89%, 49%) 0%, hsl(40, 84%, 53%) 100%;
+$paper-gradient: 90deg, hsl(230, 89%, 62%) 0%, hsl(230, 89%, 65%) 100%;
+$rock-gradient: 90deg, hsl(349, 71%, 52%) 0%, hsl(349, 70%, 56%) 100%;
+$lizard-gradient: 90deg, hsl(261, 73%, 60%) 0%, hsl(261, 72%, 63%) 100%;
+$cyan: 90deg, hsl(189, 59%, 53%) 0%, hsl(189, 58%, 57%) 100%;
+
+$default-easing: cubic-bezier(.47,.35,.22,.6);

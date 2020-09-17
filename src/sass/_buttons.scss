@@ -1,0 +1,142 @@
+.btn {
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 10px;
+            border: none;
+            padding: .8rem 2.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: .35s $default-easing;
+
+            &__outline {
+                &--white {
+                    border: 2px solid $header-outline;
+                    background-color: transparent;
+                    color: #fff;
+
+                    &:hover,
+                    &:active {
+                        background-color: #fff;
+                        color: $dark-text;
+                        border-color: #fff;
+                        transition: .35s $default-easing;
+                    }
+                }
+
+                &--blue {
+                    border: 2px solid $dark-text;
+                    background-color: transparent;
+                    color: $dark-text;
+
+                    &:hover,
+                    &:active {
+                        background-color: $dark-text;
+                        color: #fff;
+                        border-color: $dark-text;
+                        transition: .35s $default-easing;
+                    }
+                }
+                
+            }
+
+            &__main {
+                &--white {
+                    border: 2px solid #fff;
+                    background-color: #fff;
+                    color: $dark-text;
+
+                    &:hover,
+                    &:active {
+                        background-color: transparent;
+                        color: #fff;
+                        transition: .35s $default-easing;
+                    }
+                }
+
+                &--blue {
+                    border: 2px solid $dark-text;
+                    background-color: $dark-text;
+                    color: #fff;
+
+                    &:hover,
+                    &:active {
+                        background-color: transparent;
+                        color: $dark-text;
+                        transition: .35s $default-easing;
+                    }
+                }
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .coin {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.281);
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: inset 0px 5px 0px rgba(0, 0, 0, 0.281);
+            }
+
+            &__rock {
+                background: linear-gradient($rock-gradient);
+
+                &::before {
+                    background-image: url("../assets/icon-rock.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+
+            &__paper {
+                background: linear-gradient($paper-gradient);
+
+                &::before {
+                    background-image: url("../assets/icon-paper.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+
+            &__scissors {
+                background: linear-gradient($scissors-gradient);
+
+                &::before {
+                    background-image: url("../assets/icon-scissors.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+            &__lizard {
+                background: linear-gradient($lizard-gradient);
+
+                &::before {
+                    background-image: url("../assets/icon-lizard.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+            &__spock {
+                background: linear-gradient($cyan);
+
+                &::before {
+                    background-image: url("../assets/icon-spock.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }

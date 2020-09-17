@@ -1,0 +1,95 @@
+.result {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        height: auto;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%);
+    
+    .coin {
+        width: 250px;
+        height: 250px;
+
+        &::before {
+            width: 200px;
+            height: 200px;
+            background-size: 50%;
+        }
+    }
+
+    &__coin-wrapper {
+        display: inline-block;
+        text-align: center;
+
+        span {
+            display: block;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: #{$spacing-grid * 4};
+            z-index: 99;
+        }
+
+        &.winner {
+            .coin {
+               animation: ripple 1s linear infinite;
+               z-index: -1; 
+            }
+        }
+    }
+
+    &__action {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        span {
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 4rem;
+            margin-bottom: #{$spacing-grid * 4};
+        }
+    }
+
+    @media all and (max-width: 960px) {
+        width: 100%;
+        flex-wrap: wrap;
+
+        .coin {
+            width: 150px;
+            height: 150px;
+
+            &::before {
+                width: 100px;
+                height: 100px;
+                background-size: 50%;
+            }
+        }
+
+        &__action {
+            order: 3;
+            width: 100%;
+        }
+    }
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba($dark-text, 0.3),
+                0 0 0 1em rgba($dark-text, 0.3),
+                0 0 0 3em rgba($dark-text, 0.3),
+                0 0 0 5em rgba($dark-text, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 1em rgba($dark-text, 0.3),
+                0 0 0 3em rgba($dark-text, 0.3),
+                0 0 0 5em rgba($dark-text, 0.3),
+                0 0 0 8em rgba($dark-text, 0);
+  }
+}
