@@ -100,7 +100,6 @@ export default {
     getComputerPick() {
       if (!this.isVariant) {
         let num = Math.floor(Math.random() * 3);
-        console.log('TEST', num);
         this.computerPick = this.arr1[num];
       } else {
         this.computerPick = this.arr2[Math.floor(Math.random() * 5)];
