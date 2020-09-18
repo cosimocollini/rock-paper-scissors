@@ -119,6 +119,7 @@ export default {
     },
     updateScore() {
       this.userWin ? (this.score += 1) : (this.score -= 1);
+      sessionStorage.setItem("score", this.score);
     },
     checkIfUserWin() {
       if (this.selectedCoin == this.computerPick) {
@@ -161,6 +162,12 @@ export default {
     if (window.screen.width < 960) {
       console.log('CIAO', window.innerHeight);
       document.querySelector("body").style.height = `${window.innerHeight}px`;
+    }
+
+    if (!sessionStorage.getItem("score")) {
+      sessionStorage.setItem("score", this.score);
+    } else {
+      this.score = sessionStorage.getItem("score") * 1;
     }
   }
 };
